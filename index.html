@@ -28,7 +28,6 @@ body {
   line-height: 1.6;
 }
 
-/* HERO */
 .hero {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
   color: white;
@@ -69,7 +68,6 @@ body {
 .tag-bern { background: var(--bern); }
 .tag-zurich { background: var(--zurich); }
 
-/* OVERVIEW */
 .overview {
   max-width: 900px;
   margin: 0 auto;
@@ -95,7 +93,6 @@ body {
 .overview-card .oc-dates { font-size: 0.8rem; opacity: 0.85; margin-top: 4px; }
 .overview-card .oc-nights { font-size: 0.75rem; opacity: 0.7; margin-top: 2px; }
 
-/* HOTEL & TRANSPORT STRIP */
 .info-strip {
   max-width: 900px;
   margin: 0 auto;
@@ -125,7 +122,6 @@ body {
 }
 .info-table .hotel-name { font-weight: 600; }
 
-/* CITY SECTIONS */
 .city-section {
   max-width: 900px;
   margin: 0 auto;
@@ -150,7 +146,6 @@ body {
   margin-bottom: 24px;
 }
 
-/* DAY CARDS */
 .day-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -190,7 +185,6 @@ body {
 }
 .day-card.open .day-body { display: block; }
 
-/* TIME BLOCKS */
 .time-block {
   margin-bottom: 16px;
 }
@@ -214,13 +208,13 @@ body {
 .activity {
   display: flex;
   gap: 12px;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #f0efec;
   font-size: 0.9rem;
 }
 .activity:last-child { border-bottom: none; }
 .activity-time {
-  min-width: 65px;
+  min-width: 70px;
   font-weight: 600;
   color: var(--muted);
   font-size: 0.8rem;
@@ -229,6 +223,30 @@ body {
 .activity-content { flex: 1; }
 .activity-name { font-weight: 600; }
 .activity-desc { color: var(--muted); font-size: 0.85rem; margin-top: 2px; }
+.activity-cost {
+  display: inline-block;
+  background: #f0f7f0;
+  color: #2E7D52;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+.activity-cost.free { background: #e8f4ec; }
+.activity-cost.paid { background: #FEF3E4; color: #B4741C; }
+.activity-cost.booked { background: #E7F0FA; color: #2563AB; }
+.book-ahead {
+  background: #FFF4D6;
+  border-left: 3px solid #E8A838;
+  padding: 6px 10px;
+  font-size: 0.78rem;
+  color: #7a6520;
+  margin-top: 6px;
+  border-radius: 0 6px 6px 0;
+  font-weight: 500;
+}
 .activity-tip {
   background: #FFF8E7;
   border-left: 3px solid #E8A838;
@@ -248,7 +266,6 @@ body {
   border-radius: 0 6px 6px 0;
 }
 
-/* FOOD HIGHLIGHT */
 .food-highlight {
   background: linear-gradient(135deg, #FFF8F0, #FFF0EE);
   border: 1px solid #f0d9c8;
@@ -269,39 +286,6 @@ body {
   line-height: 1.5;
 }
 
-/* BUDGET SECTION */
-.budget-box {
-  background: #f7f7f5;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px 20px;
-  margin-top: 16px;
-}
-.budget-box h4 {
-  font-size: 0.85rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--muted);
-}
-.budget-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 0;
-  font-size: 0.85rem;
-}
-.budget-total {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 0 0;
-  margin-top: 6px;
-  border-top: 2px solid var(--border);
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-/* CHECKLIST */
 .checklist {
   background: #F0F7FF;
   border: 1px solid #d0e3f7;
@@ -321,12 +305,11 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  padding: 4px 0;
+  padding: 5px 0;
   font-size: 0.85rem;
 }
-.checklist-item input { margin-top: 3px; }
+.checklist-item input { margin-top: 4px; }
 
-/* FOOTER */
 .footer {
   text-align: center;
   padding: 48px 24px;
@@ -349,7 +332,6 @@ body {
 </head>
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <h1>Central Europe 2026</h1>
   <p class="subtitle">Jul 25 – Aug 7 &nbsp;·&nbsp; 14 days &nbsp;·&nbsp; 4 travelers</p>
@@ -366,7 +348,6 @@ body {
   </div>
 </div>
 
-<!-- OVERVIEW -->
 <div class="overview">
   <h2>Trip at a Glance</h2>
   <div class="overview-grid">
@@ -398,38 +379,34 @@ body {
   </div>
 </div>
 
-<!-- HOTELS & TRANSPORT -->
 <div class="info-strip">
   <table class="info-table">
     <thead>
       <tr><th>City</th><th>Hotel</th><th>Transport In</th></tr>
     </thead>
     <tbody>
-      <tr><td>Vienna</td><td class="hotel-name">Courtyard Vienna Prater/Messe</td><td>Flight → VIE airport → train/taxi to hotel</td></tr>
-      <tr><td>Prague</td><td class="hotel-name">The Julius Prague</td><td>ČD Railjet rj 254 · Wien Hbf 9:10 → Praha hl.n. 13:23</td></tr>
-      <tr><td>Stuttgart</td><td class="hotel-name">ARCOTEL Camino</td><td>Flight Prague → Frankfurt · Rental car Frankfurt → Stuttgart</td></tr>
-      <tr><td>Bern</td><td class="hotel-name">Hotel Savoy Bern</td><td>Rental car from Stuttgart (via Basel stopover)</td></tr>
-      <tr><td>Zurich</td><td class="hotel-name">Townhouse Boutique Hotel</td><td>SBB train Bern → Zürich HB (~57 min)</td></tr>
+      <tr><td>Vienna</td><td class="hotel-name">Novotel Wien Hauptbahnhof</td><td>Flight → VIE → direct train to Wien Hbf (hotel is at the station)</td></tr>
+      <tr><td>Prague</td><td class="hotel-name">Grandium Hotel Prague</td><td>ČD Railjet rj 254 · Wien Hbf 9:10 → Praha hl.n. 13:23</td></tr>
+      <tr><td>Stuttgart</td><td class="hotel-name">ARCOTEL Camino</td><td>Flight PRG 8:50 → FRA 9:50 · Rohit meets with rental car → drive to Stuttgart</td></tr>
+      <tr><td>Bern</td><td class="hotel-name">Hotel Savoy Bern</td><td>Train Stuttgart → Zurich → Bern (Aug 2)</td></tr>
+      <tr><td>Zurich</td><td class="hotel-name">Townhouse Boutique Hotel</td><td>SBB train Bern → Zürich HB (~57 min direct)</td></tr>
     </tbody>
   </table>
 </div>
 
-<!-- ============================================ -->
 <!-- VIENNA -->
-<!-- ============================================ -->
 <div class="city-section">
   <div class="city-header">
     <span class="city-flag">🇦🇹</span>
     <h2 style="color:var(--vienna)">Vienna</h2>
   </div>
-  <p class="city-meta">Jul 25–28 · 3 nights · Courtyard Vienna Prater/Messe</p>
+  <p class="city-meta">Jul 25–28 · 3 nights · Novotel Wien Hauptbahnhof</p>
 
-  <!-- Day 1 -->
   <div class="day-card open">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 1 — Arrival & First Taste</div>
-        <div class="day-date">Friday, July 25</div>
+        <div class="day-date">Saturday, July 25</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
@@ -437,26 +414,27 @@ body {
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon</span>
         <div class="activity"><div class="activity-time">~12:00</div><div class="activity-content"><div class="activity-name">Land at Vienna Airport (VIE)</div></div></div>
-        <div class="activity"><div class="activity-time">~12:30</div><div class="activity-content"><div class="activity-name">Train or taxi to hotel</div><div class="activity-desc">ÖBB train to Wien Hbf (15 min, €4.40/person) or taxi (~€35 split 4 ways)</div></div></div>
-        <div class="activity"><div class="activity-time">~1:30</div><div class="activity-content"><div class="activity-name">Drop bags at hotel</div><div class="activity-desc">Check-in is 3pm — ask for early check-in or leave luggage with front desk</div></div></div>
-        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Prater & Riesenrad</div><div class="activity-desc">Your hotel is right here. Ride the iconic 1897 ferris wheel for panoramic city views (€13.50/person). Stroll the chestnut-lined Hauptallee. ~1.5 hrs</div></div></div>
-        <div class="activity"><div class="activity-time">4:30</div><div class="activity-content"><div class="activity-name">Hundertwasser House</div><div class="activity-desc">~20 min walk or quick tram. Colorful, quirky residential building + art village market across the street. Free to view from outside. 30–45 min</div></div></div>
+        <div class="activity"><div class="activity-time">~12:30</div><div class="activity-content"><div class="activity-name">Direct train VIE → Wien Hbf</div><div class="activity-desc">ÖBB Railjet/IC, 15 min direct. Novotel is right at Wien Hbf — walk straight from train to hotel.</div><span class="activity-cost paid">€4.40/person</span></div></div>
+        <div class="activity"><div class="activity-time">~1:30</div><div class="activity-content"><div class="activity-name">Drop bags at hotel</div><div class="activity-desc">Check-in is 3pm — ask front desk to hold bags. Freshen up.</div></div></div>
+        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Belvedere Palace</div><div class="activity-desc">15 min walk from hotel. Home to Klimt's "The Kiss" — one of the most famous paintings in the world. Budget 1.5–2 hrs.</div><span class="activity-cost paid">€17.70/person</span>
+        <div class="book-ahead">📅 Book online in advance at belvedere.at (saves €2 + skip line)</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">4:30</div><div class="activity-content"><div class="activity-name">Belvedere Gardens & walk back</div><div class="activity-desc">Baroque gardens between Upper and Lower Belvedere. Walk back toward hotel via Karlsplatz.</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Rathausplatz Film Festival</div><div class="activity-desc">U2 from Krieau → Rathaus (~15 min). FREE open-air concert/opera screening on giant screen in front of Gothic City Hall. Dozens of international food stalls surround the square — grab dinner here. Austrian schnitzel, Greek, paella, Asian, whatever looks good. Leave whenever you're ready.</div>
-        <div class="activity-tip">💡 Perfect arrival evening — no reservation needed, no fixed schedule. Eat when you want, leave when you want.</div>
+        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Rathausplatz Film Festival</div><div class="activity-desc">U1 from Südtiroler Platz (at hotel) → Rathaus, ~10 min. FREE open-air concert/opera on giant screen in front of Gothic City Hall. Dozens of food stalls surround the square — Austrian schnitzel, Greek, paella, Asian. Grab dinner, eat outdoors.</div><span class="activity-cost free">Free entry · Food ~€10–15/pp</span>
+        <div class="activity-tip">💡 Perfect first evening — no reservation, no schedule, leave whenever.</div>
         </div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 2 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 2 — Imperial Vienna</div>
-        <div class="day-date">Saturday, July 26</div>
+        <div class="day-date">Sunday, July 26</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
@@ -464,37 +442,42 @@ body {
       <div class="time-block">
         <span class="time-block-label tb-morning">Morning</span>
         <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Breakfast at hotel</div></div></div>
-        <div class="activity"><div class="activity-time">9:15</div><div class="activity-content"><div class="activity-name">Schönbrunn Palace</div><div class="activity-desc">U4 from Messe-Prater → Schönbrunn (~25 min). Grand Tour: 40 rooms, ~90 min. €29/person — book timed entry online in advance. Arrive before the crowds.</div></div></div>
-        <div class="activity"><div class="activity-time">11:00</div><div class="activity-content"><div class="activity-name">Schönbrunn Gardens & Gloriette</div><div class="activity-desc">FREE. Walk up to the Gloriette for the best panoramic view of Vienna. Benches along the way if anyone needs a rest. ~45 min</div></div></div>
+        <div class="activity"><div class="activity-time">9:30</div><div class="activity-content"><div class="activity-name">Schönbrunn Palace</div><div class="activity-desc">U1 → Karlsplatz → U4 to Schönbrunn, ~25 min. Grand Tour: 40 rooms, ~90 min guided audio tour.</div><span class="activity-cost paid">€32/person (Grand Tour)</span>
+        <div class="book-ahead">📅 MUST book timed entry in advance at schoenbrunn.at — Sunday morning slots fill up</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">11:00</div><div class="activity-content"><div class="activity-name">Schönbrunn Gardens & Gloriette</div><div class="activity-desc">Walk up to the Gloriette for the best panoramic view of Vienna. Benches along the way.</div><span class="activity-cost free">Free (gardens) · Gloriette rooftop €5.50</span></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Naschmarkt</div><div class="activity-desc">U4 to Kettenbrückengasse. Vienna's most famous outdoor market — 120+ stalls. Turkish, Viennese, Mediterranean, Japanese. Browse and eat your way through lunch. Budget €10–15/person.</div>
-        <div class="activity-food-tip">🍽 Must-try: fresh falafel wraps, Austrian cheese, olives, baklava. Grab a table at one of the sit-down stalls for a proper plate if walking and eating gets tiring.</div>
+        <span class="time-block-label tb-food">Lunch — Naschmarkt</span>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Naschmarkt</div><div class="activity-desc">U4 to Kettenbrückengasse. Vienna's most famous outdoor market — 120+ stalls. Turkish, Viennese, Mediterranean, Japanese. Grab tables at a sit-down stall.</div><span class="activity-cost paid">~€12–15/pp</span>
+        <div class="activity-food-tip">🍽 Try: fresh falafel wraps, Austrian cheeses, olives, baklava. Or sit down for full Middle Eastern platters.</div>
+        <div class="activity-tip">⚠️ Naschmarkt stalls are CLOSED on Sundays — you may need a Plan B. Consider Café Sperl (nearby, open Sundays) or head straight to a Beisl for lunch.</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon</span>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Hofburg Palace</div><div class="activity-desc">15 min walk from Naschmarkt. Imperial Apartments + Sisi Museum. €19.50/person. ~1.5–2 hrs</div></div></div>
-        <div class="activity"><div class="activity-time">3:30</div><div class="activity-content"><div class="activity-name">Coffee break — Viennese Kaffeehaus</div><div class="activity-desc">Café Central (iconic, touristy but worth it) or Café Sperl (more local, less crowded). Sit down, rest, take your time.</div>
-        <div class="activity-food-tip">🍽 Order a Melange (Viennese cappuccino) + Apfelstrudel. This is a cultural institution, not just a café stop.</div>
+        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Hofburg Palace</div><div class="activity-desc">15 min walk. Imperial Apartments + Sisi Museum + Silver Collection combo. Budget 1.5–2 hrs.</div><span class="activity-cost paid">€21/person</span>
+        <div class="book-ahead">📅 Book at hofburg-wien.at — walk-in usually fine on Sundays</div>
         </div></div>
-        <div class="activity"><div class="activity-time">4:30</div><div class="activity-content"><div class="activity-name">Stephansdom & Graben</div><div class="activity-desc">St. Stephen's Cathedral — FREE to enter. Optional: climb south tower for city views (€6). Browse the surrounding Graben and Kohlmarkt shopping streets.</div></div></div>
+        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Coffee break — Viennese Kaffeehaus</div><div class="activity-desc">Café Central (iconic, touristy but worth it) or Café Sperl (more local). Sit, rest, take your time.</div><span class="activity-cost paid">~€10/pp for coffee + cake</span>
+        <div class="activity-food-tip">🍽 Order a Melange (Viennese cappuccino) + Apfelstrudel or Sachertorte.</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Stephansdom & Graben</div><div class="activity-desc">St. Stephen's Cathedral entry is free. Optional south tower climb.</div><span class="activity-cost free">Free entry · Tower €6</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">6:00</div><div class="activity-content"><div class="activity-name">Rest at hotel</div></div></div>
-        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Popfest Wien at Karlsplatz</div><div class="activity-desc">FREE outdoor music festival — last night. 50+ acts across multiple stages. Pop, rock, indie. Grab street food, wander between stages, leave when ready.</div></div></div>
+        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Dinner at a traditional Beisl</div><div class="activity-desc">Look for "Beisl" or "Gasthaus" signs. Try Wiener Schnitzel or Tafelspitz (boiled beef with apple horseradish).</div><span class="activity-cost paid">€15–25/pp</span>
+        <div class="activity-food-tip">🍽 Suggested: Gasthaus Pöschl or Zum Schwarzen Kameel. Both in the center, both open Sunday evenings.</div>
+        </div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 3 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">Day 3 — Art, Views & Farewell</div>
-        <div class="day-date">Sunday, July 27</div>
+        <div class="day-title">Day 3 — Prater, Views & Farewell</div>
+        <div class="day-date">Monday, July 27</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
@@ -502,400 +485,365 @@ body {
       <div class="time-block">
         <span class="time-block-label tb-morning">Morning</span>
         <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Breakfast at hotel</div></div></div>
-        <div class="activity"><div class="activity-time">9:45</div><div class="activity-content"><div class="activity-name">Belvedere Palace</div><div class="activity-desc">Short tram or taxi (~15 min). Home to Klimt's "The Kiss" — one of the most famous paintings in the world. €18.50/person. ~1.5–2 hrs</div></div></div>
-        <div class="activity"><div class="activity-time">11:30</div><div class="activity-content"><div class="activity-name">Belvedere Gardens</div><div class="activity-desc">FREE. Walk the Baroque gardens between Upper and Lower Belvedere. Beautiful, rarely crowded, great photo ops. Plenty of benches.</div></div></div>
+        <div class="activity"><div class="activity-time">10:00</div><div class="activity-content"><div class="activity-name">Prater & Riesenrad</div><div class="activity-desc">U1 to Praterstern, ~10 min. Iconic 1897 ferris wheel with panoramic city views. Stroll the chestnut-lined Hauptallee. ~1.5 hrs.</div><span class="activity-cost paid">€14/person (Riesenrad)</span></div></div>
+        <div class="activity"><div class="activity-time">11:30</div><div class="activity-content"><div class="activity-name">Hundertwasser House</div><div class="activity-desc">Quick tram from Prater. Colorful, quirky residential building + Kunst Haus Wien art village. View from outside is free.</div><span class="activity-cost free">Free (exterior)</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Lunch at a traditional Beisl</div><div class="activity-desc">A Beisl is a traditional Viennese pub restaurant. Try Wiener Schnitzel (breaded veal) or Tafelspitz (boiled beef with apple horseradish). €12–18/person for a full meal.</div>
-        <div class="activity-food-tip">🍽 Look for the word "Beisl" or "Gasthaus" — these are the local spots. Avoid anything with photos of food on the sign outside.</div>
+        <div class="activity"><div class="activity-time">1:00</div><div class="activity-content"><div class="activity-name">Figlmüller (Wiener Schnitzel institution)</div><div class="activity-desc">The famous plate-sized schnitzel. Two locations near Stephansdom. No reservations at lunch — walk in.</div><span class="activity-cost paid">~€20–25/pp</span>
+        <div class="activity-food-tip">🍽 Their schnitzel hangs off the plate. Order one to share if you're not hungry — it's massive.</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon</span>
-        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Stadtpark</div><div class="activity-desc">FREE. Vienna's most popular park. Find the golden Johann Strauss statue — great photo op. Benches, shade, and a relaxed vibe. Good for a slow stroll or just sitting.</div></div></div>
-        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">MuseumsQuartier or Albertina</div><div class="activity-desc">MQ courtyard is FREE — grab a drink at one of the outdoor cafés in Vienna's best hangout spot. Or visit the Albertina museum (250th anniversary exhibition). Flexible — pick based on energy levels.</div></div></div>
-        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Back to hotel — pack for tomorrow</div></div></div>
+        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Stadtpark</div><div class="activity-desc">Vienna's most popular park. Find the golden Johann Strauss statue. Benches, shade, relaxed vibe.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">3:30</div><div class="activity-content"><div class="activity-name">MuseumsQuartier</div><div class="activity-desc">MQ courtyard is free — grab a drink at outdoor cafés in Vienna's best hangout spot. Optional: Leopold Museum for Klimt/Schiele.</div><span class="activity-cost free">Free (courtyard)</span></div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Back to hotel — pack for tomorrow</div><div class="activity-desc">Train tomorrow morning to Prague.</div></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Farewell dinner at Rathausplatz</div><div class="activity-desc">Last chance at the Film Festival food stalls. Farewell dinner under the stars with the Gothic City Hall lit up behind you. FREE screening + pay-as-you-eat food stalls.</div></div></div>
-        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Vienna Cabaret Festival (optional)</div><div class="activity-desc">Running in the City Hall courtyard, right next door. Even if the comedy is in German, the courtyard atmosphere is worth experiencing.</div></div></div>
+        <span class="time-block-label tb-evening">Evening — Farewell Vienna</span>
+        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Farewell dinner at Rathausplatz Film Festival</div><div class="activity-desc">Last chance — international food stalls + free open-air screening under the illuminated Gothic City Hall.</div><span class="activity-cost paid">~€15/pp for food</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 4 departure -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 4 — Departure to Prague</div>
-        <div class="day-date">Monday, July 28</div>
+        <div class="day-date">Tuesday, July 28</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-travel">Travel Day</span>
-        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Breakfast & pack</div></div></div>
-        <div class="activity"><div class="activity-time">8:00</div><div class="activity-content"><div class="activity-name">Check out early</div></div></div>
-        <div class="activity"><div class="activity-time">8:20</div><div class="activity-content"><div class="activity-name">Taxi to Wien Hauptbahnhof</div><div class="activity-desc">~10 min, €12–16 for the taxi</div></div></div>
-        <div class="activity"><div class="activity-time">9:10</div><div class="activity-content"><div class="activity-name">🚂 ČD Railjet rj 254 departs for Prague</div><div class="activity-desc">1st class, 4h13m direct. Restaurant car on board.</div></div></div>
-        <div class="activity"><div class="activity-time">13:23</div><div class="activity-content"><div class="activity-name">Arrive Praha hlavní nádraží</div><div class="activity-desc">5-minute walk to The Julius Prague</div></div></div>
+        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Breakfast & pack</div></div></div>
+        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Check out</div><div class="activity-desc">Hotel is AT Wien Hbf — no taxi needed. Walk straight to the platform.</div></div></div>
+        <div class="activity"><div class="activity-time">9:10</div><div class="activity-content"><div class="activity-name">🚂 ČD Railjet rj 254 "Vindobona" departs</div><div class="activity-desc">1st class, 4h13m direct. Restaurant car on board. Book at cd.cz for best price.</div><span class="activity-cost booked">4,264 CZK / ~$205 for 4 (booked)</span></div></div>
+        <div class="activity"><div class="activity-time">13:23</div><div class="activity-content"><div class="activity-name">Arrive Praha hlavní nádraží</div><div class="activity-desc">5-minute walk to Grandium Hotel Prague.</div></div></div>
       </div>
     </div>
   </div>
-
-  <div class="budget-box">
-    <h4>Vienna Budget Estimate (4 adults)</h4>
-    <div class="budget-row"><span>Schönbrunn Palace (4×€29)</span><span>€116</span></div>
-    <div class="budget-row"><span>Hofburg (4×€19.50)</span><span>€78</span></div>
-    <div class="budget-row"><span>Belvedere (4×€18.50)</span><span>€74</span></div>
-    <div class="budget-row"><span>Riesenrad (4×€13.50)</span><span>€54</span></div>
-    <div class="budget-row"><span>Transit (3-day passes)</span><span>~€70</span></div>
-    <div class="budget-row"><span>Food & drink (~€40/person/day)</span><span>~€480</span></div>
-    <div class="budget-total"><span>Total Vienna</span><span>~€870 (~$950)</span></div>
-  </div>
 </div>
 
-<!-- ============================================ -->
 <!-- PRAGUE -->
-<!-- ============================================ -->
 <div class="city-section">
   <div class="city-header">
     <span class="city-flag">🇨🇿</span>
     <h2 style="color:var(--prague)">Prague</h2>
   </div>
-  <p class="city-meta">Jul 28–31 · 3 nights · The Julius Prague</p>
+  <p class="city-meta">Jul 28–31 · 3 nights · Grandium Hotel Prague</p>
 
   <div class="food-highlight">
     <h4>Czech Food Cheat Sheet</h4>
     <p><strong>Svíčková</strong> — beef sirloin in cream sauce with cranberries + bread dumplings. The national dish.<br>
     <strong>Guláš</strong> — rich, dark goulash, often served in a bread bowl.<br>
     <strong>Vepřové koleno</strong> — roasted pork knuckle. Massive, shareable.<br>
-    <strong>Smažený sýr</strong> — deep-fried cheese with tartar sauce. Czech comfort food.<br>
+    <strong>Smažený sýr</strong> — deep-fried cheese with tartar sauce. Comfort food.<br>
     <strong>Kolache</strong> — traditional pastries (quark, poppy seed, plum jam). The real Czech pastry — NOT trdelník.<br>
     <strong>Beer</strong> — Pilsner Urquell, Budvar, Kozel. Half-litre in a pub: CZK 40–70 (under $3).</p>
   </div>
 
-  <!-- Day 4 Prague -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 4 — Arrival & Old Town Evening</div>
-        <div class="day-date">Monday, July 28</div>
+        <div class="day-date">Tuesday, July 28</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-food">Late Lunch</span>
-        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Bredovský Dvůr</div><div class="activity-desc">10 min walk from hotel. Former brewery with giant copper beer tanks. Roasted pork knee, wild boar, goulash. Two full meals + six beers ≈ $50 total.</div>
-        <div class="activity-food-tip">🍽 Your first proper Czech meal. Start with the pork knee to share and order individual svíčková or goulash.</div>
+        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Bredovský Dvůr</div><div class="activity-desc">10 min walk from hotel. Former brewery with copper beer tanks. Roasted pork knee, wild boar, goulash.</div><span class="activity-cost paid">~$50 total for 4 (meals + beers)</span>
+        <div class="activity-food-tip">🍽 Start with pork knee to share, then individual svíčková or goulash.</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Late Afternoon</span>
-        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Old Town Square</div><div class="activity-desc">FREE. 12 min walk from hotel. No agenda — take in the Astronomical Clock, Týn Church spires, pastel buildings.</div></div></div>
-        <div class="activity"><div class="activity-time">4:30</div><div class="activity-content"><div class="activity-name">Kolacherie on Celetná Street</div><div class="activity-desc">Authentic Czech pastries at normal prices. Quark, poppy seed, plum jam. A couple bucks total. Get one of each.</div></div></div>
-        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Astronomical Clock</div><div class="activity-desc">FREE. Catch the mechanical apostle show on the hour (runs every hour 9am–11pm).</div></div></div>
+        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Old Town Square</div><div class="activity-desc">FREE. 12 min walk from hotel. Take in the Astronomical Clock, Týn Church spires, pastel buildings.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">4:30</div><div class="activity-content"><div class="activity-name">Kolacherie on Celetná Street</div><div class="activity-desc">Authentic Czech pastries at normal prices. Quark, poppy seed, plum jam.</div><span class="activity-cost paid">~CZK 40 (~$2) each</span></div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Astronomical Clock hourly show</div><div class="activity-desc">Free. Mechanical apostle show on the hour (9am–11pm daily).</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">6:00</div><div class="activity-content"><div class="activity-name">Charles Bridge at golden hour</div><div class="activity-desc">FREE. Walk across for the best photo op in Prague — 30 baroque statues with the castle lit up across the river. Less crowded in evening.</div></div></div>
-        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Dinner at Lokál Dlouhááá</div><div class="activity-desc">Gold standard for tank beer + traditional Czech food. Fried cheese, Prague ham, goulash. Loud, busy, unpretentious, cheap. No reservation needed. ~8 min from Old Town Square.</div></div></div>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Evening stroll through Old Town</div><div class="activity-desc">The square and surrounding streets are beautifully lit at night.</div></div></div>
+        <div class="activity"><div class="activity-time">6:00</div><div class="activity-content"><div class="activity-name">Charles Bridge at golden hour</div><div class="activity-desc">Free. Best photo op in Prague — 30 baroque statues with castle lit up across river.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Dinner at Lokál Dlouhááá</div><div class="activity-desc">Gold standard for tank beer + traditional Czech food. Fried cheese, Prague ham, goulash. No reservation needed.</div><span class="activity-cost paid">~$15/pp</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 5 Prague -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 5 — Castle District & Malá Strana</div>
-        <div class="day-date">Tuesday, July 29</div>
+        <div class="day-date">Wednesday, July 29</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-morning">Morning</span>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Tram 22 to Prague Castle</div><div class="activity-desc">CZK 40 (~$2). The tram drops you partway up the hill, saving the steep climb.</div></div></div>
-        <div class="activity"><div class="activity-time">9:15</div><div class="activity-content"><div class="activity-name">Prague Castle complex</div><div class="activity-desc">Largest ancient castle in the world. Grounds are FREE to walk through. Circuit B ticket: CZK 250/person (~$12) covers St. Vitus Cathedral interior, Old Royal Palace, Golden Lane, St. George's Basilica. ~2.5 hrs total.</div></div></div>
-        <div class="activity"><div class="activity-time">9:30</div><div class="activity-content"><div class="activity-name">St. Vitus Cathedral</div><div class="activity-desc">Inside the castle complex. The Alfons Mucha stained glass window alone is worth it.</div></div></div>
-        <div class="activity"><div class="activity-time">10:30</div><div class="activity-content"><div class="activity-name">Golden Lane</div><div class="activity-desc">Tiny colorful houses built into the castle wall. Franz Kafka lived at No. 22. Quick 15-min walk-through.</div></div></div>
+        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Tram 22 to Prague Castle</div><div class="activity-desc">Regular city tram (buy at any tobacco shop or via app). Drops you partway up the hill.</div><span class="activity-cost paid">CZK 40 (~$2) each</span></div></div>
+        <div class="activity"><div class="activity-time">9:15</div><div class="activity-content"><div class="activity-name">Prague Castle complex — Circuit B ticket</div><div class="activity-desc">Grounds are free. Circuit B covers St. Vitus Cathedral interior, Old Royal Palace, Golden Lane, St. George's Basilica. ~2.5 hrs total.</div><span class="activity-cost paid">CZK 250/pp (~$12) — buy at gate or hrad.cz</span>
+        <div class="book-ahead">📅 No advance booking needed but arrive before 10am to avoid lines</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">10:30</div><div class="activity-content"><div class="activity-name">Golden Lane</div><div class="activity-desc">Tiny colorful houses in the castle wall. Franz Kafka lived at No. 22. Included in Circuit B.</div><span class="activity-cost booked">Included</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Late Morning — Downhill Walk</span>
-        <div class="activity"><div class="activity-time">11:15</div><div class="activity-content"><div class="activity-name">Castle Gardens → Malá Strana</div><div class="activity-desc">FREE. Scenic downhill walk through terraced gardens with red rooftop views. All downhill, gentle pace. Cobblestone streets, quiet squares, baroque churches below.</div></div></div>
-        <div class="activity"><div class="activity-time">11:45</div><div class="activity-content"><div class="activity-name">Coffee at Café Savoy</div><div class="activity-desc">Stunning neo-Renaissance ceiling, handmade pastries from their bakery. A Prague institution. Good recharge stop for everyone.</div>
-        <div class="activity-food-tip">🍽 Book 48 hrs ahead. Order the Savoy Breakfast or their house pastries.</div>
+        <div class="activity"><div class="activity-time">11:15</div><div class="activity-content"><div class="activity-name">Castle Gardens → Malá Strana</div><div class="activity-desc">Free. Scenic downhill walk with red rooftop views. All downhill, gentle pace.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">11:45</div><div class="activity-content"><div class="activity-name">Coffee at Café Savoy</div><div class="activity-desc">Stunning neo-Renaissance ceiling. Handmade pastries from their bakery. Prague institution.</div><span class="activity-cost paid">~$8–12/pp</span>
+        <div class="book-ahead">📅 Book 48 hrs ahead at cafesavoy.ambi.cz</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">U Tří Jelínků</div><div class="activity-desc">Short walk from castle area. Hearty goulash, duck, dumplings. Traditional and affordable.</div></div></div>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">U Tří Jelínků</div><div class="activity-desc">Short walk from castle area. Hearty goulash, duck, dumplings.</div><span class="activity-cost paid">~$15/pp</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon — Relaxed</span>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Lennon Wall</div><div class="activity-desc">FREE. Colorful, ever-changing graffiti wall — symbol of peace since the 1980s. 10–15 min photo stop.</div></div></div>
-        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Kampa Island</div><div class="activity-desc">FREE. Quiet park on a small island with Charles Bridge views. Benches, shade, David Černý baby sculptures. Great spot to sit and relax.</div></div></div>
-        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Petřín Hill (optional)</div><div class="activity-desc">Funicular up (CZK 40), mini Eiffel Tower lookout at top. Panoramic city views. Or head back to hotel for an afternoon break — totally fine.</div></div></div>
+        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Lennon Wall</div><div class="activity-desc">Colorful ever-changing graffiti wall. Symbol of peace since the 1980s.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Kampa Island</div><div class="activity-desc">Quiet park with Charles Bridge views. Benches, shade, David Černý baby sculptures.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Petřín Hill (optional)</div><div class="activity-desc">Funicular up (uses regular tram ticket), mini Eiffel Tower lookout. Skip if tired — hotel break is fine.</div><span class="activity-cost paid">Funicular CZK 40 · Tower CZK 220</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">Dinner at Kantýna</div><div class="activity-desc">Former bank turned butcher-restaurant. Get a "ticket" on entry, order meat by weight at the counter, eat at communal tables. Carpaccio and burgers reportedly the best in the country. Casual, fun, different.</div></div></div>
-        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Wenceslas Square evening stroll (optional)</div><div class="activity-desc">FREE. Prague's grand 750m boulevard. National Museum lit up at the far end.</div></div></div>
+        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">Dinner at Kantýna</div><div class="activity-desc">Former bank turned butcher-restaurant. Get "ticket" on entry, order meat by weight, eat at communal tables. Casual, fun.</div><span class="activity-cost paid">~$15–20/pp</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 6 Prague -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 6 — Jewish Quarter & Farewell Dinner</div>
-        <div class="day-date">Wednesday, July 30</div>
+        <div class="day-date">Thursday, July 30</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-morning">Morning</span>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Breakfast at Café Imperial</div><div class="activity-desc">One of Prague's most beautiful interiors — Art Deco with 100+ year-old ceramic tile walls and ceiling. Worth going just for the space. ~10 min walk from hotel.</div></div></div>
-        <div class="activity"><div class="activity-time">10:30</div><div class="activity-content"><div class="activity-name">Josefov (Jewish Quarter)</div><div class="activity-desc">Prague's historic Jewish district. The Old Jewish Cemetery — 12,000 tombstones layered over 400 years. Combo ticket covers cemetery + synagogues. CZK 350/person (~$17). ~1.5 hrs.</div></div></div>
-        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Pařížská Street</div><div class="activity-desc">FREE. Prague's most elegant boulevard. Art Nouveau architecture, window shopping.</div></div></div>
+        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Breakfast at Café Imperial</div><div class="activity-desc">One of Prague's most beautiful interiors. Art Deco ceramic tile walls and ceiling.</div><span class="activity-cost paid">~$15/pp</span></div></div>
+        <div class="activity"><div class="activity-time">10:30</div><div class="activity-content"><div class="activity-name">Josefov (Jewish Quarter)</div><div class="activity-desc">Old Jewish Cemetery — 12,000 tombstones layered over 400 years. Combo ticket covers cemetery + synagogues. ~1.5 hrs.</div><span class="activity-cost paid">CZK 550/pp (~$26) · CZK 400 without Old-New Synagogue</span>
+        <div class="book-ahead">📅 Buy online at jewishmuseum.cz to skip line</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Pařížská Street</div><div class="activity-desc">Prague's most elegant boulevard. Art Nouveau architecture, window shopping.</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Naše Maso</div><div class="activity-desc">Tiny, legendary butcher shop in Old Town. Dry-aged burger, meatloaf (sekaná), or sausages. Stand and eat at the counter. Under $10/person. If there's a line, it moves fast.</div></div></div>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Naše Maso</div><div class="activity-desc">Legendary butcher shop in Old Town. Dry-aged burger, meatloaf (sekaná), or sausages. Stand and eat at counter.</div><span class="activity-cost paid">Under $10/pp</span></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-afternoon">Afternoon — Free Exploration</span>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Charles Bridge (daytime revisit)</div><div class="activity-desc">FREE. Different feel in daylight. Walk across to Old Town side.</div></div></div>
-        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Old Town Bridge Tower</div><div class="activity-desc">Best elevated view of Charles Bridge + castle. CZK 150/person (~$7). Skip the climb and grab a terrace drink at the bridge foot if preferred.</div></div></div>
-        <div class="activity"><div class="activity-time">2:45</div><div class="activity-content"><div class="activity-name">Wander Old Town backstreets</div><div class="activity-desc">FREE. Small galleries, bookshops, hidden courtyards between Old Town Square and the river. No agenda.</div></div></div>
-        <div class="activity"><div class="activity-time">3:30</div><div class="activity-content"><div class="activity-name">Afternoon break</div><div class="activity-desc">Back to hotel, or find a riverside terrace at Náplavka (often has pop-up bars/food stalls in summer).</div></div></div>
+        <span class="time-block-label tb-afternoon">Afternoon</span>
+        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Charles Bridge (daytime revisit)</div><div class="activity-desc">Different feel in daylight. Walk across to Old Town side.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Old Town Bridge Tower</div><div class="activity-desc">Best elevated view of Charles Bridge + castle. Optional — skip if not up for stairs.</div><span class="activity-cost paid">CZK 190/pp (~$9)</span></div></div>
+        <div class="activity"><div class="activity-time">2:45</div><div class="activity-content"><div class="activity-name">Wander Old Town backstreets</div><div class="activity-desc">Galleries, bookshops, hidden courtyards.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">3:30</div><div class="activity-content"><div class="activity-name">Náplavka riverside break</div><div class="activity-desc">River embankment with pop-up bars and food stalls in summer. Or back to hotel to rest.</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">Farewell dinner at U Červeného Páva</div><div class="activity-desc">Consistently rated the best traditional Czech food in Old Town. Prague sausage, svíčková, pork knuckle. Book ahead or go early.</div>
-        <div class="activity-food-tip">🍽 The Prague sausage here has perfect snap on the casing. The svíčková gets better with every bite. Multiple reviewers called this their best meal in Prague.</div>
+        <span class="time-block-label tb-evening">Evening — Farewell Prague</span>
+        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">Farewell dinner at U Červeného Páva</div><div class="activity-desc">Consistently rated the best traditional Czech food in Old Town. Prague sausage, svíčková, pork knuckle.</div><span class="activity-cost paid">~$20–25/pp</span>
+        <div class="book-ahead">📅 Book at ucervenehopava.cz — go early if walking in</div>
         </div></div>
-        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Last evening stroll in Old Town Square</div><div class="activity-desc">One final look at the square lit up at night. Grab a trdelník if you want — yes, it's a tourist invention, but warm cinnamon dough + ice cream is still good.</div></div></div>
+        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Old Town Square at night</div><div class="activity-desc">One last look at the illuminated square. Grab a trdelník if you want.</div><span class="activity-cost paid">Trdelník ~CZK 90</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 7 Prague departure -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">Day 7 — Departure to Stuttgart</div>
-        <div class="day-date">Thursday, July 31</div>
+        <div class="day-title">Day 7 — EARLY Flight to Frankfurt → Stuttgart</div>
+        <div class="day-date">Friday, July 31</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-travel">Travel Day</span>
-        <div class="activity"><div class="activity-time">8:00</div><div class="activity-content"><div class="activity-name">Breakfast & pack</div></div></div>
-        <div class="activity"><div class="activity-time">~11:00</div><div class="activity-content"><div class="activity-name">Check out of The Julius Prague</div></div></div>
-        <div class="activity"><div class="activity-time">TBD</div><div class="activity-content"><div class="activity-name">✈️ Flight Prague (PRG) → Frankfurt (FRA)</div><div class="activity-desc">Confirm flight time. Prague Airport is ~40 min from city center by bus/taxi.</div></div></div>
-        <div class="activity"><div class="activity-time">TBD</div><div class="activity-content"><div class="activity-name">🚗 Pick up rental car at Frankfurt Airport</div><div class="activity-desc">Enterprise Fullsize. Drive Frankfurt → Stuttgart (~2 hrs via A8 autobahn).</div></div></div>
-        <div class="activity"><div class="activity-time">~Eve</div><div class="activity-content"><div class="activity-name">Arrive Stuttgart, check into ARCOTEL Camino</div><div class="activity-desc">Settle in. Grab a casual dinner near the hotel — Schlossplatz area has plenty of options.</div></div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">⏰ Early wake-up</div><div class="activity-desc">Flight is at 8:50 AM — you need to leave hotel by ~6:15 AM.</div></div></div>
+        <div class="activity"><div class="activity-time">6:15</div><div class="activity-content"><div class="activity-name">Check out & taxi to Prague Airport (PRG)</div><div class="activity-desc">~40 min taxi ride. Book taxi night before or use Bolt/Uber.</div><span class="activity-cost paid">~CZK 700 (~$33) for taxi</span></div></div>
+        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Arrive PRG — check in for flight</div></div></div>
+        <div class="activity"><div class="activity-time">8:50</div><div class="activity-content"><div class="activity-name">✈️ Flight PRG → FRA</div><div class="activity-desc">Prague → Frankfurt, 1 hour.</div><span class="activity-cost booked">Flight booked</span></div></div>
+        <div class="activity"><div class="activity-time">9:50</div><div class="activity-content"><div class="activity-name">Arrive Frankfurt Airport (FRA)</div></div></div>
+        <div class="activity"><div class="activity-time">~10:30</div><div class="activity-content"><div class="activity-name">🚗 Meet Rohit at FRA arrivals with rental car</div><div class="activity-desc">Coordinate meeting point in advance. Head straight to Stuttgart.</div></div></div>
+        <div class="activity"><div class="activity-time">~11:00</div><div class="activity-content"><div class="activity-name">🚗 Drive Frankfurt → Stuttgart (~2 hrs via A5/A8)</div><div class="activity-desc">Highway rest stops (Raststätten) have decent food if hungry.</div></div></div>
+        <div class="activity"><div class="activity-time">~1:00</div><div class="activity-content"><div class="activity-name">Arrive Stuttgart, check into ARCOTEL Camino</div><div class="activity-desc">Rest, freshen up. Casual afternoon exploring Schlossplatz area near hotel.</div></div></div>
+      </div>
+      <div class="time-block">
+        <span class="time-block-label tb-evening">Evening</span>
+        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Casual German dinner near Schlossplatz</div><div class="activity-desc">Try Swabian food — Maultaschen (stuffed pasta pockets), Spätzle, Zwiebelrostbraten.</div><span class="activity-cost paid">€15–25/pp</span></div></div>
       </div>
     </div>
   </div>
-
-  <div class="budget-box">
-    <h4>Prague Budget Estimate (4 adults)</h4>
-    <div class="budget-row"><span>Prague Castle Circuit B (4×CZK 250)</span><span>~$48</span></div>
-    <div class="budget-row"><span>Jewish Quarter combo (4×CZK 350)</span><span>~$67</span></div>
-    <div class="budget-row"><span>Bridge Tower (4×CZK 150)</span><span>~$29</span></div>
-    <div class="budget-row"><span>Transit (trams, 3 days)</span><span>~$38</span></div>
-    <div class="budget-row"><span>Food & drink (~$30/person/day)</span><span>~$360</span></div>
-    <div class="budget-total"><span>Total Prague</span><span>~$550–650</span></div>
-  </div>
 </div>
 
-<!-- ============================================ -->
 <!-- STUTTGART -->
-<!-- ============================================ -->
 <div class="city-section">
   <div class="city-header">
     <span class="city-flag">🇩🇪</span>
     <h2 style="color:var(--stuttgart)">Stuttgart</h2>
   </div>
-  <p class="city-meta">Jul 31 – Aug 2 · 2 nights · ARCOTEL Camino · 🚗 Rental car available</p>
+  <p class="city-meta">Jul 31 – Aug 2 · 2 nights · ARCOTEL Camino</p>
 
-  <!-- Day 8 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">Day 8 — Cars, Views & German Food</div>
-        <div class="day-date">Friday, August 1</div>
+        <div class="day-title">Day 8 — Automotive Stuttgart</div>
+        <div class="day-date">Saturday, August 1</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
-        <span class="time-block-label tb-morning">Morning</span>
+        <span class="time-block-label tb-morning">Morning — Mercedes-Benz Museum</span>
         <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Breakfast at hotel</div></div></div>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Mercedes-Benz Museum</div><div class="activity-desc">Drive or S-Bahn to Bad Cannstatt. One of the world's best car museums — 9 floors spanning 130+ years of automotive history. Budget 2.5–3 hrs.</div>
-        <div class="activity-tip">💡 Buy your Porsche Museum ticket here for a 25% combo discount on both museums.</div>
+        <div class="activity"><div class="activity-time">9:30</div><div class="activity-content"><div class="activity-name">Mercedes-Benz Museum</div><div class="activity-desc">World-class car museum — 9 floors, 130+ years of automotive history. Rohit can drive or take S1 from central Stuttgart to Neckarpark, 15 min. Budget 2.5–3 hrs.</div><span class="activity-cost paid">€16/adult · €8/student</span>
+        <div class="activity-tip">💡 Buy Porsche Museum combo ticket here for 25% off both museums.</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Lunch at museum restaurant or nearby</div><div class="activity-desc">The Mercedes museum has an on-site restaurant. Or drive into the city center for Swabian food.</div>
-        <div class="activity-food-tip">🍽 Swabian specialties to try: Maultaschen (stuffed pasta pockets — the "Swabian ravioli"), Spätzle (egg noodles, usually with cheese), Zwiebelrostbraten (roast beef with crispy onions).</div>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Lunch at museum restaurant or nearby</div><div class="activity-desc">Museum has an on-site restaurant with Swabian options. Or drive into center for a Weinstube.</div><span class="activity-cost paid">€15–20/pp</span>
+        <div class="activity-food-tip">🍽 Swabian must-tries: Maultaschen (Swabian ravioli), Käsespätzle (cheese noodles), Zwiebelrostbraten (roast beef with crispy onions).</div>
         </div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-afternoon">Afternoon</span>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Porsche Museum</div><div class="activity-desc">Drive to Zuffenhausen (~20 min). Sleek, design-forward museum. 1.5–2 hrs. Closed Mondays (you're here on a Friday, so no issue).</div></div></div>
-        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Schlossplatz</div><div class="activity-desc">FREE. Stuttgart's central plaza — Old Palace, New Palace, green lawns. Sit at an outdoor café, people-watch, unwind after the museums.</div></div></div>
+        <span class="time-block-label tb-afternoon">Afternoon — Porsche Museum</span>
+        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Porsche Museum</div><div class="activity-desc">Drive to Zuffenhausen, ~20 min. Sleek design-forward museum. Budget 1.5–2 hrs. Closed Mondays (you're here Saturday — fine).</div><span class="activity-cost paid">€12/adult · €6/student</span></div></div>
+        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Schlossplatz</div><div class="activity-desc">Stuttgart's central plaza — Old Palace, New Palace, green lawns. Sit at an outdoor café, unwind.</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">5:30</div><div class="activity-content"><div class="activity-name">Stuttgart TV Tower</div><div class="activity-desc">World's first concrete TV tower. Observation deck with 360° panoramic views of the city, vineyards, and Black Forest on a clear day. Drive up (~15 min from center).</div></div></div>
-        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Dinner in Stuttgart</div><div class="activity-desc">Try a traditional Swabian Weinstube (wine tavern). Stuttgart is wine country — order a local Trollinger or Lemberger red with your Maultaschen and Spätzle. €15–25/person.</div></div></div>
+        <div class="activity"><div class="activity-time">5:30</div><div class="activity-content"><div class="activity-name">Stuttgart TV Tower</div><div class="activity-desc">World's first concrete TV tower. 360° views of city, vineyards, and Black Forest on clear days.</div><span class="activity-cost paid">€9.50/pp</span></div></div>
+        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Dinner at a Weinstube</div><div class="activity-desc">Stuttgart is wine country. Order a local Trollinger or Lemberger red with Maultaschen and Spätzle.</div><span class="activity-cost paid">€20–30/pp</span>
+        <div class="activity-food-tip">🍽 Try Weinstube Schellenturm or Weinhaus Stetter — traditional, atmospheric.</div>
+        </div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 9 departure -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">Day 9 — Drive to Bern (via Basel)</div>
-        <div class="day-date">Saturday, August 2</div>
+        <div class="day-title">Day 9 — Train to Bern via Zurich</div>
+        <div class="day-date">Sunday, August 2</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
-        <span class="time-block-label tb-morning">Morning</span>
-        <div class="activity"><div class="activity-time">8:00</div><div class="activity-content"><div class="activity-name">Breakfast & pack</div></div></div>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Optional: Factory tour (if booked)</div><div class="activity-desc">If you booked a Mercedes or Porsche factory tour, this morning is the slot. If not, head out toward Basel.</div></div></div>
+        <span class="time-block-label tb-travel">Travel Day</span>
+        <div class="activity"><div class="activity-time">7:30</div><div class="activity-content"><div class="activity-name">Breakfast & pack</div></div></div>
+        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Check out ARCOTEL Camino (by 12pm)</div><div class="activity-desc">Say goodbye to Rohit — walk to Stuttgart Hbf (~10 min).</div></div></div>
+        <div class="activity"><div class="activity-time">~10:00</div><div class="activity-content"><div class="activity-name">🚂 Train Stuttgart Hbf → Zürich HB</div><div class="activity-desc">ICE/IC direct, ~3h. Multiple departures per hour. Book Sparpreis fare on int.bahn.de for best price.</div><span class="activity-cost paid">~€45–70/pp (2nd class, advance)</span>
+        <div class="book-ahead">📅 Book NOW at bahn.de — Sparpreis fares sell out</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">~1:00</div><div class="activity-content"><div class="activity-name">Arrive Zürich HB — grab lunch during layover</div><div class="activity-desc">Zürich HB has excellent food options (Marktplatz downstairs). 30–60 min layover, easy platform transfer.</div><span class="activity-cost paid">~CHF 15–20/pp</span></div></div>
+        <div class="activity"><div class="activity-time">~2:00</div><div class="activity-content"><div class="activity-name">🚂 SBB IC Zürich → Bern (~57 min direct)</div><div class="activity-desc">Trains every 30 min. Book Supersaver on sbb.ch for up to 70% off.</div><span class="activity-cost paid">~CHF 30/pp Supersaver</span></div></div>
+        <div class="activity"><div class="activity-time">~3:00</div><div class="activity-content"><div class="activity-name">Arrive Bern, check into Hotel Savoy Bern</div><div class="activity-desc">Hotel is 5 min walk from Bern Hbf. Evening free to explore Bern Old Town on foot.</div></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-travel">Travel + Basel Stopover</span>
-        <div class="activity"><div class="activity-time">10:00</div><div class="activity-content"><div class="activity-name">Check out ARCOTEL Camino</div></div></div>
-        <div class="activity"><div class="activity-time">10:15</div><div class="activity-content"><div class="activity-name">🚗 Drive Stuttgart → Basel (~2 hrs)</div></div></div>
-        <div class="activity"><div class="activity-time">~12:15</div><div class="activity-content"><div class="activity-name">Basel stopover (2–3 hrs)</div><div class="activity-desc">Park near the Old Town. Walk the Rhine promenade, see Basel Cathedral (FREE — the Pfalz terrace behind it has stunning river views). Grab lunch at a riverside café. This covers Basel without needing a hotel night.</div>
-        <div class="activity-food-tip">🍽 Try a Basler Mehlsuppe (flour soup) — Basel's signature dish, oddly delicious.</div>
-        </div></div>
-        <div class="activity"><div class="activity-time">~3:00</div><div class="activity-content"><div class="activity-name">🚗 Drive Basel → Bern (~1 hr)</div></div></div>
-        <div class="activity"><div class="activity-time">~4:00</div><div class="activity-content"><div class="activity-name">Arrive Bern, check into Hotel Savoy Bern</div><div class="activity-desc">Drop car at rental return or hotel parking. Evening free to explore Bern Old Town on foot.</div></div></div>
+        <span class="time-block-label tb-evening">Evening</span>
+        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Casual dinner in Bern Old Town</div><div class="activity-desc">Restaurant under the arcades. Rösti or Berner Platte.</div><span class="activity-cost paid">CHF 25–35/pp</span></div></div>
       </div>
     </div>
   </div>
-
-  <div class="budget-box">
-    <h4>Stuttgart Budget Estimate (4 adults)</h4>
-    <div class="budget-row"><span>Mercedes-Benz Museum (4 tickets)</span><span>~€48</span></div>
-    <div class="budget-row"><span>Porsche Museum (4 tickets)</span><span>~€40</span></div>
-    <div class="budget-row"><span>TV Tower (4 tickets)</span><span>~€40</span></div>
-    <div class="budget-row"><span>Food & drink (2 days, ~€35/person/day)</span><span>~€280</span></div>
-    <div class="budget-row"><span>Fuel (rental car, Stuttgart–Basel–Bern)</span><span>~€50</span></div>
-    <div class="budget-total"><span>Total Stuttgart + transit</span><span>~€460 (~$500)</span></div>
-  </div>
 </div>
 
-<!-- ============================================ -->
 <!-- BERN -->
-<!-- ============================================ -->
 <div class="city-section">
   <div class="city-header">
     <span class="city-flag">🇨🇭</span>
     <h2 style="color:var(--bern)">Bern</h2>
   </div>
-  <p class="city-meta">Aug 2–5 · 3 nights · Hotel Savoy Bern</p>
+  <p class="city-meta">Aug 2–5 · 3 nights · Hotel Savoy Bern · 🚗 Hertz Compact Aug 3–4</p>
 
   <div class="food-highlight">
     <h4>Swiss Food Warning</h4>
-    <p>Switzerland is expensive. A restaurant meal runs CHF 25–45/person (~$28–50). Budget accordingly. The upside: the quality is consistently high, and fondue in its homeland is a must-do experience.</p>
+    <p>Switzerland is expensive. Restaurant meals run CHF 25–45/person. Budget accordingly. The upside: quality is consistently high, and fondue in its homeland is a must-do.</p>
   </div>
 
-  <!-- Day 10 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">Day 10 — Gruyères Cheese + Montreux & Chillon</div>
-        <div class="day-date">Sunday, August 3</div>
+        <div class="day-title">Day 10 — Gruyères Cheese + Montreux/Chillon</div>
+        <div class="day-date">Monday, August 3</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
-      <div class="activity-tip">💡 This is the big day trip by rental car. Total driving: ~3 hrs spread across the day. All stops are on a natural loop — no backtracking.</div>
+      <div class="activity-tip">💡 Big day trip by rental car (Hertz Compact, picked up 9am). Total driving ~3 hrs across the day. Natural loop, no backtracking.</div>
       <div class="time-block">
         <span class="time-block-label tb-morning">Morning — Gruyères</span>
-        <div class="activity"><div class="activity-time">8:00</div><div class="activity-content"><div class="activity-name">🚗 Drive Bern → Gruyères (~45 min)</div></div></div>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">La Maison du Gruyère (cheese factory)</div><div class="activity-desc">CHF 7/person (~$8). Watch cheesemakers at work (best before noon), taste 3 aging stages of Gruyère. Self-guided audio tour narrated by a cow named Cherry. ~45 min. No reservation needed.</div></div></div>
-        <div class="activity"><div class="activity-time">10:00</div><div class="activity-content"><div class="activity-name">Walk up to Gruyères village</div><div class="activity-desc">Car-free medieval hilltop village. Cobblestone streets, castle, panoramic Alpine views. Gruyères Castle (13th century) optional: ~CHF 12/person. ~1.5 hrs to wander.</div></div></div>
+        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">🚗 Pick up Hertz Compact in Bern</div><div class="activity-desc">Confirm pickup location. Vignette is included on Swiss rentals.</div><span class="activity-cost booked">Rental booked (Aug 3–4)</span></div></div>
+        <div class="activity"><div class="activity-time">9:30</div><div class="activity-content"><div class="activity-name">🚗 Drive Bern → Gruyères (~45 min via A12)</div></div></div>
+        <div class="activity"><div class="activity-time">10:15</div><div class="activity-content"><div class="activity-name">La Maison du Gruyère (cheese factory)</div><div class="activity-desc">Watch cheesemakers at work (best before noon). Self-guided audio tour narrated by a cow named Cherry. 3 aging stages tasting included. ~45 min.</div><span class="activity-cost paid">CHF 7/pp (~$8)</span></div></div>
+        <div class="activity"><div class="activity-time">11:15</div><div class="activity-content"><div class="activity-name">Walk up to Gruyères medieval village</div><div class="activity-desc">Car-free hilltop village. Cobblestone streets, castle, panoramic Alpine views.</div><span class="activity-cost free">Free (village) · Castle CHF 12/pp optional</span></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Fondue lunch in Gruyères</div><div class="activity-desc">This is the birthplace of Gruyère cheese. Fondue here is the real deal. CHF 25–30/person.</div>
-        <div class="activity-food-tip">🍽 Order the classic moitié-moitié (half Gruyère, half Vacherin). The tradition: if you drop your bread in the pot, you buy a round of drinks.</div>
+        <span class="time-block-label tb-food">Lunch — Fondue in Gruyères</span>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Fondue at a village restaurant</div><div class="activity-desc">Birthplace of Gruyère cheese. Fondue here is the real deal.</div><span class="activity-cost paid">CHF 25–30/pp</span>
+        <div class="activity-food-tip">🍽 Order moitié-moitié (half Gruyère, half Vacherin). Tradition: drop your bread in the pot, you buy a round.</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon — Montreux & Chillon</span>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">🚗 Drive Gruyères → Montreux (~45 min)</div></div></div>
-        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Chillon Castle</div><div class="activity-desc">Best-preserved medieval castle in Switzerland, right on Lake Geneva. ~CHF 14/person. Budget 1.5–2 hrs. Rooms, dungeons, lakeside terraces.</div></div></div>
-        <div class="activity"><div class="activity-time">4:30</div><div class="activity-content"><div class="activity-name">Montreux lake promenade</div><div class="activity-desc">FREE. Flower-lined walkway along Lake Geneva with Alps across the water. Find the Freddie Mercury statue — popular photo stop. Grab a coffee or glass of wine at a lakeside terrace. Rest here as long as you like.</div></div></div>
-        <div class="activity"><div class="activity-time">6:00</div><div class="activity-content"><div class="activity-name">🚗 Drive Montreux → Bern (~1 hr 15 min)</div></div></div>
-        <div class="activity"><div class="activity-time">~7:15</div><div class="activity-content"><div class="activity-name">Dinner in Bern Old Town</div><div class="activity-desc">Casual dinner after a long day. Try a Bern Brasserie or restaurant in the arcaded streets.</div></div></div>
+        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">🚗 Drive Gruyères → Montreux (~45 min)</div></div></div>
+        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Chillon Castle</div><div class="activity-desc">Best-preserved medieval castle in Switzerland, right on Lake Geneva. Budget 1.5–2 hrs. Rooms, dungeons, lakeside terraces.</div><span class="activity-cost paid">CHF 15/adult · CHF 7.50/student</span>
+        <div class="book-ahead">📅 Buy timed entry at chillon.ch to skip line</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Montreux lake promenade</div><div class="activity-desc">Free. Flower-lined walkway along Lake Geneva. Freddie Mercury statue. Coffee or wine at a lakeside terrace.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">🚗 Drive Montreux → Bern (~1 hr 15 min)</div></div></div>
+        <div class="activity"><div class="activity-time">~8:00</div><div class="activity-content"><div class="activity-name">Late dinner in Bern Old Town</div><div class="activity-desc">Casual, since it's a long day. Or grab something at a hotel-area spot.</div><span class="activity-cost paid">CHF 25–30/pp</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 11 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 11 — Bern City Day</div>
-        <div class="day-date">Monday, August 4</div>
+        <div class="day-date">Tuesday, August 4</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
-        <span class="time-block-label tb-morning">Morning — Old Town Essentials</span>
+        <span class="time-block-label tb-morning">Morning — Return Car + Old Town</span>
         <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Breakfast at hotel</div></div></div>
-        <div class="activity"><div class="activity-time">10:00</div><div class="activity-content"><div class="activity-name">Zytglogge (Clock Tower)</div><div class="activity-desc">FREE from outside. Medieval astronomical clock — catch the mechanical show on the hour. The natural starting point for exploring the Old Town.</div></div></div>
-        <div class="activity"><div class="activity-time">10:15</div><div class="activity-content"><div class="activity-name">Wander the UNESCO Old Town</div><div class="activity-desc">FREE. 6 km of covered sandstone arcades (Lauben) — the longest covered shopping promenade in Europe. Browse shops, fountains, and medieval architecture. Covered walkways are great if it rains.</div></div></div>
-        <div class="activity"><div class="activity-time">11:00</div><div class="activity-content"><div class="activity-name">Bärenpark (Bear Park)</div><div class="activity-desc">FREE. Bern's symbolic bears in a natural enclosure along the Aare River. Quick 20–30 min stop, right by the river.</div></div></div>
+        <div class="activity"><div class="activity-time">9:45</div><div class="activity-content"><div class="activity-name">Return Hertz Compact (by 10pm)</div><div class="activity-desc">You have until 10pm, but return in morning to free up the day. Walk back to hotel.</div></div></div>
+        <div class="activity"><div class="activity-time">10:30</div><div class="activity-content"><div class="activity-name">Zytglogge (Clock Tower)</div><div class="activity-desc">Medieval astronomical clock. Catch mechanical show on the hour.</div><span class="activity-cost free">Free (exterior)</span></div></div>
+        <div class="activity"><div class="activity-time">10:45</div><div class="activity-content"><div class="activity-name">UNESCO Old Town wander</div><div class="activity-desc">6 km of covered sandstone arcades (Lauben) — longest covered shopping promenade in Europe. Fountains, medieval architecture.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">11:30</div><div class="activity-content"><div class="activity-name">Bärenpark (Bear Park)</div><div class="activity-desc">Bern's symbolic bears in natural enclosure along the Aare. ~20–30 min.</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-food">Lunch</span>
-        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Lunch in the Old Town</div><div class="activity-desc">Find a restaurant under the arcades. Try Rösti (Swiss hash browns, often topped with cheese, bacon, or egg) — the Swiss national dish that originated in Bern.</div>
-        <div class="activity-food-tip">🍽 Berner Platte is the local specialty — a giant platter of smoked meats, sausages, beans, and sauerkraut. Best shared.</div>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Lunch in the Old Town arcades</div><div class="activity-desc">Try Rösti (Swiss hash browns) — the national dish that originated in Bern.</div><span class="activity-cost paid">CHF 20–30/pp</span>
+        <div class="activity-food-tip">🍽 Berner Platte is the local specialty — giant platter of smoked meats, sausages, beans, sauerkraut. Best shared.</div>
         </div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon — Views & Rest</span>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Rosengarten (Rose Garden)</div><div class="activity-desc">FREE. Up on the hill above Old Town — best panoramic view of Bern's rooftops, the Aare river loop, and the Alps on a clear day. Café on site, benches everywhere. A great spot to sit and take it all in.</div></div></div>
-        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">Federal Palace (Bundeshaus)</div><div class="activity-desc">FREE to walk the public terrace — sweeping views of the Alps from the back. Guided interior tours on weekdays if parliament isn't in session.</div></div></div>
-        <div class="activity"><div class="activity-time">3:30</div><div class="activity-content"><div class="activity-name">Afternoon break or Gurten</div><div class="activity-desc">Option A: Rest at hotel. Option B: Take the Gurten funicular (5 min) up the small mountain south of the city. Panoramic views, casual restaurant, playground. Low-effort "mountain" experience.</div></div></div>
+        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Rosengarten (Rose Garden)</div><div class="activity-desc">Free. Hill above Old Town — best panoramic view of rooftops, Aare river loop, Alps on clear days. Café on site, benches.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Federal Palace (Bundeshaus) terrace</div><div class="activity-desc">Free public terrace with sweeping Alps views.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Gurten (optional) or hotel break</div><div class="activity-desc">Optional: funicular up the small mountain south of Bern (5 min ride). Panoramic views, casual restaurant. Or rest at hotel.</div><span class="activity-cost paid">Funicular ~CHF 10/pp round trip</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening — Last Night in Bern</span>
-        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Farewell dinner</div><div class="activity-desc">Nice dinner in the Old Town. Your last night before Zurich — take your time, enjoy the medieval atmosphere under the arcades.</div></div></div>
+        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Farewell dinner in Old Town</div><div class="activity-desc">Take your time under the arcades. Try a nicer restaurant since it's the last Bern night.</div><span class="activity-cost paid">CHF 30–45/pp</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 12 departure -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 12 — Departure to Zurich</div>
-        <div class="day-date">Tuesday, August 5</div>
+        <div class="day-date">Wednesday, August 5</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
@@ -904,26 +852,14 @@ body {
         <span class="time-block-label tb-travel">Travel Day</span>
         <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Breakfast & pack</div></div></div>
         <div class="activity"><div class="activity-time">11:00</div><div class="activity-content"><div class="activity-name">Check out Hotel Savoy Bern</div></div></div>
-        <div class="activity"><div class="activity-time">~12:00</div><div class="activity-content"><div class="activity-name">🚂 SBB train Bern → Zürich HB (~57 min)</div><div class="activity-desc">Direct, no changes. Book Supersaver tickets on sbb.ch for up to 70% off. Trains run every 30 min.</div></div></div>
-        <div class="activity"><div class="activity-time">~1:00</div><div class="activity-content"><div class="activity-name">Arrive Zurich, drop bags at Townhouse Boutique Hotel</div><div class="activity-desc">Check-in is 3pm. Leave luggage, head out to explore.</div></div></div>
+        <div class="activity"><div class="activity-time">~12:00</div><div class="activity-content"><div class="activity-name">🚂 SBB IC Bern → Zürich HB (~57 min direct)</div><div class="activity-desc">Trains every 30 min. Book Supersaver on sbb.ch.</div><span class="activity-cost paid">~CHF 30/pp Supersaver</span></div></div>
+        <div class="activity"><div class="activity-time">~1:00</div><div class="activity-content"><div class="activity-name">Arrive Zurich, drop bags at Townhouse Boutique Hotel</div><div class="activity-desc">Check-in is 3pm. Head out to explore.</div></div></div>
       </div>
     </div>
   </div>
-
-  <div class="budget-box">
-    <h4>Bern Budget Estimate (4 adults)</h4>
-    <div class="budget-row"><span>Gruyère cheese factory (4×CHF 7)</span><span>CHF 28</span></div>
-    <div class="budget-row"><span>Chillon Castle (4×CHF 14)</span><span>CHF 56</span></div>
-    <div class="budget-row"><span>Gruyères Castle (4×CHF 12, optional)</span><span>CHF 48</span></div>
-    <div class="budget-row"><span>Fuel (day trip loop)</span><span>~CHF 40</span></div>
-    <div class="budget-row"><span>Food & drink (3 days, ~CHF 50/person/day)</span><span>~CHF 600</span></div>
-    <div class="budget-total"><span>Total Bern</span><span>~CHF 780 (~$880)</span></div>
-  </div>
 </div>
 
-<!-- ============================================ -->
 <!-- ZURICH -->
-<!-- ============================================ -->
 <div class="city-section">
   <div class="city-header">
     <span class="city-flag">🇨🇭</span>
@@ -931,119 +867,108 @@ body {
   </div>
   <p class="city-meta">Aug 5–7 · 2 nights · Townhouse Boutique Hotel</p>
 
-  <!-- Day 12 afternoon -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 12 — Zurich Arrival & Old Town</div>
-        <div class="day-date">Tuesday, August 5</div>
+        <div class="day-date">Wednesday, August 5</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-afternoon">Afternoon</span>
-        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Lindenhof</div><div class="activity-desc">FREE. Roman hilltop square with the best panoramic view in Zurich. Giant chess board, shady trees, no crowds. 5 min walk from hotel area.</div></div></div>
-        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Grossmünster</div><div class="activity-desc">Zurich's twin-tower Reformation cathedral. FREE to enter. Climb the tower for rooftop views over the Limmat (CHF 5).</div></div></div>
-        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Stroll Bahnhofstrasse & lakefront</div><div class="activity-desc">FREE. One of the world's most famous shopping streets. Walk it down to the lake. End with a lakefront stroll along Zürichsee.</div></div></div>
+        <div class="activity"><div class="activity-time">2:00</div><div class="activity-content"><div class="activity-name">Lindenhof</div><div class="activity-desc">Roman hilltop square with best panoramic view in Zurich. Giant chess board, shady trees, no crowds.</div><span class="activity-cost free">Free</span></div></div>
+        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Grossmünster</div><div class="activity-desc">Zurich's twin-tower Reformation cathedral. Optional tower climb for rooftop views over the Limmat.</div><span class="activity-cost paid">Free entry · Tower CHF 5/pp</span></div></div>
+        <div class="activity"><div class="activity-time">4:00</div><div class="activity-content"><div class="activity-name">Bahnhofstrasse & lakefront stroll</div><div class="activity-desc">Walk one of the world's most famous shopping streets down to Lake Zurich. Lakefront walk along Zürichsee.</div><span class="activity-cost free">Free</span></div></div>
       </div>
       <div class="time-block">
         <span class="time-block-label tb-evening">Evening</span>
-        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">Dinner along the Limmat</div><div class="activity-desc">Find a restaurant along the river in the Niederdorf area (Old Town east bank). Outdoor terraces line the waterfront. Try Zürich Geschnetzeltes (sliced veal in cream sauce with rösti).</div>
-        <div class="activity-food-tip">🍽 Zeughauskeller is a historic beer hall (1487!) with affordable Swiss-German food right in the center. A good budget option in an otherwise expensive city.</div>
+        <div class="activity"><div class="activity-time">6:30</div><div class="activity-content"><div class="activity-name">Dinner along the Limmat</div><div class="activity-desc">Restaurant along the river in Niederdorf (Old Town east bank). Try Zürich Geschnetzeltes (sliced veal in cream sauce with rösti).</div><span class="activity-cost paid">CHF 30–40/pp</span>
+        <div class="activity-food-tip">🍽 Zeughauskeller (historic beer hall from 1487) has affordable Swiss-German food right in center. Great budget option.</div>
         </div></div>
-        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Lakefront sunset</div><div class="activity-desc">FREE. Walk along the lake as the sun sets. Bürkliplatz at the foot of Bahnhofstrasse is a good spot.</div></div></div>
+        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Lakefront sunset at Bürkliplatz</div><div class="activity-desc">Walk along the lake as the sun sets.</div><span class="activity-cost free">Free</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 13 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">Day 13 — Rhine Falls & Final Day</div>
-        <div class="day-date">Wednesday, August 6</div>
+        <div class="day-title">Day 13 — Rhine Falls + Lindt Home of Chocolate</div>
+        <div class="day-date">Thursday, August 6</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
+      <div class="activity-tip">💡 Big day — morning Rhine Falls, mid-afternoon Lindt museum ticket at 2:30 PM (booked). Timing is tight but doable.</div>
       <div class="time-block">
-        <span class="time-block-label tb-morning">Morning — Rhine Falls Day Trip</span>
-        <div class="activity"><div class="activity-time">8:30</div><div class="activity-content"><div class="activity-name">Breakfast at hotel</div></div></div>
-        <div class="activity"><div class="activity-time">9:15</div><div class="activity-content"><div class="activity-name">🚂 Train Zürich HB → Neuhausen Rheinfall (~45 min)</div></div></div>
-        <div class="activity"><div class="activity-time">10:00</div><div class="activity-content"><div class="activity-name">Rhine Falls</div><div class="activity-desc">The most powerful waterfall in Europe. July = peak water volume, so timing is perfect. Take the boat to the central rock for the dramatic up-close view (~CHF 7). The viewing platforms are FREE. Budget 1.5–2 hrs.</div>
-        <div class="activity-tip">💡 Go early (before 10am) to beat crowds. The boat ride is short but worth it — you climb stairs carved into the rock while water thunders around you.</div>
+        <span class="time-block-label tb-morning">Morning — Rhine Falls</span>
+        <div class="activity"><div class="activity-time">8:00</div><div class="activity-content"><div class="activity-name">Breakfast at hotel</div></div></div>
+        <div class="activity"><div class="activity-time">8:45</div><div class="activity-content"><div class="activity-name">🚂 Train Zürich HB → Neuhausen Rheinfall (~50 min)</div><div class="activity-desc">Direct trains via IR/S-Bahn. Buy tickets at station.</div><span class="activity-cost paid">~CHF 18/pp round trip</span></div></div>
+        <div class="activity"><div class="activity-time">9:45</div><div class="activity-content"><div class="activity-name">Rhine Falls</div><div class="activity-desc">Most powerful waterfall in Europe. August = still high water volume. Viewing platforms are free. Optional boat to the central rock.</div><span class="activity-cost paid">Free viewing · Boat CHF 7/pp</span>
+        <div class="activity-tip">💡 Boat ride to the rock is short but incredible — climb stairs carved into stone with water thundering around you.</div>
         </div></div>
+        <div class="activity"><div class="activity-time">11:30</div><div class="activity-content"><div class="activity-name">🚂 Train back to Zürich HB</div></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-afternoon">Afternoon — Back in Zurich</span>
-        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Train back to Zurich</div></div></div>
-        <div class="activity"><div class="activity-time">1:30</div><div class="activity-content"><div class="activity-name">Lunch in Niederdorf</div><div class="activity-desc">Zurich's Old Town east bank — narrow medieval streets with restaurants, cafés, and shops. Less touristy than Bahnhofstrasse side.</div></div></div>
-        <div class="activity"><div class="activity-time">3:00</div><div class="activity-content"><div class="activity-name">Free afternoon</div><div class="activity-desc">Options: Lake Zurich boat cruise (~1 hr, CHF 9–15), swim at one of the public Badis (lake swimming spots, FREE or CHF 8), browse the Swiss National Museum (free on Saturdays, otherwise CHF 10), or simply relax at a lakeside café. Last afternoon of the trip — do whatever feels right.</div></div></div>
+        <span class="time-block-label tb-food">Lunch — Quick</span>
+        <div class="activity"><div class="activity-time">12:30</div><div class="activity-content"><div class="activity-name">Quick lunch at Zürich HB or near hotel</div><div class="activity-desc">Keep it fast — need to head to Lindt by 2pm. Zürich HB Marktplatz downstairs has lots of options.</div><span class="activity-cost paid">CHF 15–20/pp</span></div></div>
       </div>
       <div class="time-block">
-        <span class="time-block-label tb-evening">Evening — Farewell Dinner</span>
-        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Final dinner of the trip</div><div class="activity-desc">This is the last supper. Splurge a little if the budget allows, or keep it casual at Zeughauskeller or a lakeside terrace. Cheese fondue is a fitting way to close out 2 weeks in Central Europe.</div>
-        <div class="activity-food-tip">🍽 Swiss Chuchi at Hotel Adler does a great fondue in the heart of Old Town. Or try raclette — melted cheese scraped over potatoes and pickles.</div>
+        <span class="time-block-label tb-afternoon">Afternoon — Lindt Home of Chocolate</span>
+        <div class="activity"><div class="activity-time">1:45</div><div class="activity-content"><div class="activity-name">Tram/S-Bahn to Kilchberg</div><div class="activity-desc">S8 from Zürich HB to Kilchberg (~15 min), then short walk. Or bus 165.</div><span class="activity-cost paid">Zurich transit pass</span></div></div>
+        <div class="activity"><div class="activity-time">2:30</div><div class="activity-content"><div class="activity-name">🍫 Lindt Home of Chocolate — Museum Tour</div><div class="activity-desc">Interactive chocolate museum. World's largest Lindt chocolate fountain (9m tall). Tasting stations, chocolate-making history. ~1.5–2 hrs.</div><span class="activity-cost booked">Booked — CHF 64 total (booking #2143368)</span>
+        <div class="activity-tip">💡 Ticket type: 2× Adults (CHF 34) + 2× Students (CHF 30). Confirmation says 06.08.2026 at 14:30.</div>
         </div></div>
-        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Lindenhof at sunset</div><div class="activity-desc">FREE. Come back to the hilltop for one last view. Glass of Swiss wine, perfect send-off.</div></div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">Back to Zurich center</div></div></div>
+      </div>
+      <div class="time-block">
+        <span class="time-block-label tb-evening">Evening — Farewell Trip Dinner</span>
+        <div class="activity"><div class="activity-time">7:00</div><div class="activity-content"><div class="activity-name">Final dinner of the trip</div><div class="activity-desc">Splurge a little for the last supper. Cheese fondue is a fitting way to close out 2 weeks in Central Europe.</div><span class="activity-cost paid">CHF 40–60/pp</span>
+        <div class="activity-food-tip">🍽 Swiss Chuchi at Hotel Adler does great fondue in Old Town heart. Or try raclette — melted cheese scraped over potatoes and pickles.</div>
+        </div></div>
+        <div class="activity"><div class="activity-time">9:00</div><div class="activity-content"><div class="activity-name">Lindenhof at sunset</div><div class="activity-desc">Free. Last view from the hilltop. Glass of Swiss wine, perfect send-off.</div><span class="activity-cost free">Free</span></div></div>
       </div>
     </div>
   </div>
 
-  <!-- Day 14 -->
   <div class="day-card">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
         <div class="day-title">Day 14 — Departure</div>
-        <div class="day-date">Thursday, August 7</div>
+        <div class="day-date">Friday, August 7</div>
       </div>
       <span class="day-chevron">▼</span>
     </div>
     <div class="day-body">
       <div class="time-block">
         <span class="time-block-label tb-travel">Departures</span>
-        <div class="activity"><div class="activity-time">~5:00</div><div class="activity-content"><div class="activity-name">✈️ Srivar departs for Berlin</div><div class="activity-desc">Swiss LX 974 · ZRH 7:10 → BER 8:35. Leave hotel by 5am (taxi or first S-Bahn to ZRH airport, ~20 min).</div></div></div>
-        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Everyone else: check out by noon</div><div class="activity-desc">Head to Zurich Airport for return flights. S-Bahn from Zürich HB → ZRH airport takes ~12 min.</div></div></div>
+        <div class="activity"><div class="activity-time">5:00</div><div class="activity-content"><div class="activity-name">✈️ Srivar departs for Berlin</div><div class="activity-desc">Swiss LX 974 · ZRH 7:10 → BER 8:35. Leave hotel by 5am (S-Bahn to ZRH airport, ~12 min).</div><span class="activity-cost booked">Booked separately</span></div></div>
+        <div class="activity"><div class="activity-time">12:00</div><div class="activity-content"><div class="activity-name">Everyone else: check out by noon</div><div class="activity-desc">Head to ZRH airport for return flights. S-Bahn from Zürich HB → ZRH takes ~12 min.</div></div></div>
       </div>
     </div>
   </div>
-
-  <div class="budget-box">
-    <h4>Zurich Budget Estimate (4 adults)</h4>
-    <div class="budget-row"><span>Grossmünster tower climb (4×CHF 5)</span><span>CHF 20</span></div>
-    <div class="budget-row"><span>Rhine Falls boat (4×CHF 7)</span><span>CHF 28</span></div>
-    <div class="budget-row"><span>Train to Rhine Falls (4× return)</span><span>~CHF 80</span></div>
-    <div class="budget-row"><span>Transit (2 days)</span><span>~CHF 40</span></div>
-    <div class="budget-row"><span>Food & drink (2 days, ~CHF 50/person/day)</span><span>~CHF 400</span></div>
-    <div class="budget-total"><span>Total Zurich</span><span>~CHF 570 (~$640)</span></div>
-  </div>
 </div>
 
-<!-- GRAND TOTAL -->
+<!-- ADVANCE BOOKING CHECKLIST -->
 <div class="city-section">
-  <div class="budget-box" style="background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; border: none;">
-    <h4 style="color: rgba(255,255,255,0.6);">Grand Total Estimate — All Cities (4 Adults, Activities + Food)</h4>
-    <div class="budget-row"><span>Vienna</span><span>~$950</span></div>
-    <div class="budget-row"><span>Prague</span><span>~$650</span></div>
-    <div class="budget-row"><span>Stuttgart + transit</span><span>~$500</span></div>
-    <div class="budget-row"><span>Bern + day trips</span><span>~$880</span></div>
-    <div class="budget-row"><span>Zurich</span><span>~$640</span></div>
-    <div class="budget-total" style="border-top-color: rgba(255,255,255,0.2);"><span>Grand Total (excl. hotels, flights, rental car)</span><span>~$3,620</span></div>
-    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 8px;">Hotels, flights, and rental car are booked separately via Expedia/eDreams. This estimate covers activities, entry fees, local transit, and food/drink only.</div>
-  </div>
-
   <div class="checklist">
-    <h4>Advance Booking Checklist</h4>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Schönbrunn Palace</strong> — book timed entry at schoenbrunn.at</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Belvedere Palace</strong> — book at belvedere.at</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Vienna → Prague train</strong> — ČD Railjet rj 254, book at cd.cz (4,264 CZK for 4 adults, 1st class)</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Café Savoy (Prague)</strong> — book 48 hrs ahead</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>U Červeného Páva (Prague)</strong> — book for farewell dinner</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Mercedes-Benz Factory Tour</strong> — book at kundencenter-app.mercedes-benz.com (sells out months ahead)</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Porsche Factory Tour</strong> — book at porsche.com (sells out months ahead)</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Bern → Zurich train</strong> — book Supersaver tickets at sbb.ch</span></div>
-    <div class="checklist-item"><input type="checkbox"> <span><strong>Confirm Prague → Frankfurt flight time</strong> — adjust Jul 31 schedule accordingly</span></div>
+    <h4>📅 Complete Advance Booking Checklist</h4>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Belvedere Palace (Vienna)</strong> — book at belvedere.at</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Schönbrunn Palace (Vienna)</strong> — MUST book timed entry at schoenbrunn.at</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Hofburg Palace (Vienna)</strong> — book at hofburg-wien.at</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Vienna → Prague train (ČD Railjet rj 254)</strong> — book at cd.cz</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Café Savoy (Prague)</strong> — book 48 hrs ahead at cafesavoy.ambi.cz</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Jewish Museum combo (Prague)</strong> — buy at jewishmuseum.cz to skip line</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>U Červeného Páva (Prague farewell dinner)</strong> — book at ucervenehopava.cz</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>PRG airport taxi/Bolt for Jul 31 morning</strong> — arrange night before</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Confirm meeting point with Rohit at FRA</strong> — coordinate on WhatsApp</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Stuttgart → Zurich train (Aug 2)</strong> — book Sparpreis at bahn.de</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Zurich → Bern train (Aug 2)</strong> — book Supersaver at sbb.ch</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Chillon Castle (Aug 3)</strong> — buy timed entry at chillon.ch</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>Bern → Zurich train (Aug 5)</strong> — book Supersaver at sbb.ch</span></div>
+    <div class="checklist-item"><input type="checkbox"> <span><strong>✅ Lindt Home of Chocolate (Aug 6, 2:30 PM)</strong> — BOOKED (#2143368)</span></div>
   </div>
 </div>
 
@@ -1058,7 +983,6 @@ function toggleDay(header) {
   const card = header.parentElement;
   card.classList.toggle('open');
 }
-// Open first day by default
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.day-card').forEach((card, i) => {
     if (i === 0) card.classList.add('open');
